@@ -14,7 +14,7 @@ UPLOAD_FOLDER = 'static/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Load the CSV file
-labels_df = pd.read_csv('/Users/avirajsingh/Desktop/IITB/Workshop/Interface/Sample Images/Labels/sample_images.csv', names=['image_id', 'dx'], delimiter=',')
+labels_df = pd.read_csv('./sample_images.csv', names=['image_id', 'dx'], delimiter=',')
 
 import torch
 import torch.nn as nn
@@ -43,7 +43,7 @@ num_ftrs = model.fc.in_features  # Should be 2048 for ResNet50
 model.fc = CustomFC(num_ftrs, 7)  # Replace fc with the custom layer
 
 # Load the state dictionary
-model.load_state_dict(torch.load('/Users/avirajsingh/Desktop/IITB/Workshop/Interface/resnet50_ham10000_model2.pth', map_location=device))
+model.load_state_dict(torch.load('../models/resnet50_ham10000_model2.pth', map_location=device))
 model.to(device)
 model.eval()
 
