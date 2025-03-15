@@ -3,12 +3,14 @@ appdirs==1.4.4
 
 atomicwrites==1.4.0
 
+et-xmlfile==1.1.0
 
-flask-cors==5.0.1
+gunicorn==23.0.0
+
 inflection==0.5.1
 
-
 matplotlib==3.10.0
+
 ply==3.11
 
 protobuf==4.25.3
@@ -24,7 +26,6 @@ PyQt5==5.15.10
 PyQtWebEngine==5.15.6
 
 sympy==1.13.1
-
 torch==2.6.0
 torchvision==0.21.0
 
