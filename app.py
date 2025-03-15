@@ -43,7 +43,7 @@ num_ftrs = model.fc.in_features  # Should be 2048 for ResNet50
 model.fc = CustomFC(num_ftrs, 7)  # Replace fc with the custom layer
 
 # Load the state dictionary
-model.load_state_dict(torch.load('../models/resnet50_ham10000_model2.pth', map_location=device))
+model.load_state_dict(torch.load('./models/resnet50_ham10000_model2.pth', map_location=device))
 model.to(device)
 model.eval()
 
